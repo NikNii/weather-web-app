@@ -1,0 +1,270 @@
+
+/* CSS for landscape orientation */
+@media only screen and (min-width: 900px){
+    body {
+        background-color: #366293;
+        background: linear-gradient(#366293,#244060);
+    }
+    .container {
+        height: 103vh;
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin: 0;
+        margin-top: -20px;
+        padding: 0;
+        font-family: 'Open Sans', sans-serif;
+    }
+    p {
+        font-size: 3vh;
+    }
+    .toolbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 8vh;
+        background-color: #264568;
+        box-shadow: 0px 2px 4px rgba(0,0,0,0.3);
+        font-weight: lighter;
+        z-index: 10;
+    }
+    .toolbar p{
+        display: block;
+        width: auto;
+        margin: 0;
+        margin-top: -7px;
+        font-size: 6vh;
+        padding-top: 5px;
+        padding-left: 3%;
+        color: white;
+    }
+    .content {
+        display: block;
+        width: 100vw;
+        height: 90vh;
+        position: absolute;
+        top: 11vh;
+    }
+    .card {
+        display: relative;
+        width: 70vw;
+        margin: 0.5vh auto;
+        padding: 1% 2% 3% 2%;
+        font-size: 120%;
+        background-color: rgb(245, 245, 245);
+        border-radius: 5px;
+        box-shadow: 0px 2px 4px rgba(0,0,0,0.25);
+        z-index: 2;
+    }
+    .card .location {
+        display: table-cell;
+        width: 60%;
+        height: 100%;
+        margin: auto;
+        padding-right: 10vw;
+        vertical-align: middle;
+        float: left;
+    }
+    .card .location span {
+        margin: auto;
+    }
+    .card .city {
+        display: block;
+        width: 50%;
+        font-size: 9vh;
+    }
+    .temperature {
+        width: 50;
+        display: block;
+        padding: 5% 2%;
+    }
+    .temperature .celsius{
+        font-size: 8vh;
+        margin: 0;
+    }
+    .card .weatherIcon {
+        float:left;
+    }
+
+    .miniCards {
+        display:flex;
+        width: 70vw;
+        margin: auto;
+    }
+    .miniCard {
+        display: relative;
+        margin: 2px;
+        width: 10vw;
+        height: 19vh;
+        background-color: rgb(245, 245, 245);
+        border-radius: 5px;
+        box-shadow: 0px 1px 4px rgba(0,0,0,0.25);
+        z-index: 2;
+    }
+    .miniCard h3 {
+        display: block;
+        padding: 5px;
+        margin: 0;
+        font-size: 3vh;
+    }
+    .miniCard .mainData {
+        display: flex;
+        margin: auto;
+        margin-top: 10px;
+        width: 100%;
+    }
+    .miniCard i {
+        padding: 0 0 0px 20px;
+    }
+    .miniCard .celsius {
+        margin: auto;
+        font-size: 4vh;
+    }
+    .miniCard .info p {
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+        font-size: 2.5vh;
+        text-align: center;
+        
+    }
+}
+
+
+
+/* CSS for portrait orientation */
+@media only screen and (max-width: 899px){
+    body{
+        background-color: #366293;
+        background: linear-gradient(#366293,#244060);
+
+    }
+    .container {
+        width: 100vw;
+        position: static;
+        top: 0;
+        left: 0;
+        margin: 0;
+        margin-top: -20px;
+        padding: 0;
+        font-family: 'Open Sans', sans-serif;
+    }
+    p {
+        font-size: 3vh;
+    }
+    .toolbar {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 8vh;
+        background-color: #264568;
+        box-shadow: 0px 2px 4px rgba(0,0,0,0.3);
+        font-weight: lighter;
+        z-index: 10;
+    }
+    .toolbar p{
+        display: block;
+        width: auto;
+        margin: 0;
+        margin-top: -7px;
+        font-size: 6vh;
+        padding-top: 5px;
+        padding-left: 3%;
+        color: white;
+    }
+    .content {
+        display: block;
+        width: 100vw;
+        height: 90vh;
+        position: absolute;
+        top: 9vh;
+    }
+    .card {
+        display: relative;
+        width: 95vw;
+        height: 55vh;
+        margin: 0.5vh auto;
+        padding: 10px 20px;
+        background-color: rgb(245, 245, 245);
+        border-radius: 5px;
+        box-shadow: 0px 2px 4px rgba(0,0,0,0.25);
+        z-index: 2;
+        overflow: auto;
+    }
+    .card .location .city {
+        font-size: 7vh;
+    }
+    .card .weatherIcon {
+        display: flex;
+        width: 30%;
+        margin: 0 11vw 0 2px;
+        float: left;
+    }
+    .card p {
+        margin-top:-2vh;
+        text-align: center;
+    }
+
+    .card .celsius {
+        display: flex;
+        width: 30%;
+        margin: 0;
+        padding-left: 6vw;
+        width: 50%;
+        text-align: right;
+        font-size: 9vh;
+    }
+    .card .info {
+        margin: 0;
+        text-align: right;
+    }
+    .miniCards {
+        display:block;
+        width: 95vw;
+        margin: auto;
+    }
+    .miniCard {
+        display: flex;
+        margin: 3px 0;
+        width: 95vw;
+        height: 6vh;
+        font-size: 1.2vh;
+        background-color: rgb(245, 245, 245);
+        border-radius: 5px;
+        box-shadow: 0px 1px 4px rgba(0,0,0,0.25);
+        z-index: 2;
+    }
+    .miniCard h3 {
+        width: 30%;
+        margin: auto;
+        display: block;
+        margin-left: 0;
+        padding: 6px;
+        font-size: 3vh;
+    }
+    .miniCard .mainData {
+        text-align: center;
+        display: flex;
+        margin: auto;
+        width: 20%;
+    }
+    .miniCard i {
+        width: 50%;
+        padding: 0;
+        font-size: 60%;
+    }
+    .miniCard p.celsius {
+        width: 50%;
+        margin: auto;
+    }
+    .miniCard .info {
+        display: flex;
+        width: 30;
+        margin: auto;
+        font-size: 2vh;        
+    }
+}
