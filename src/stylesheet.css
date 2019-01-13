@@ -3,6 +3,7 @@
 @media only screen and (min-width: 900px){
     body {
         height: 100vh;
+        width: 100vw;
         position: absolute;
         top:0;
         left: 0;
@@ -78,17 +79,12 @@
         vertical-align: middle;
         float: left;
     }
-    .card .location {
-        margin: auto;
-    }
-    .card .city {
+    .card .city, .today {
         display: block;
         width: 50%;
         font-size: 9vh;
     }
     .card .today {
-        display: block;
-        width: 50%;
         font-size: 5vh;
     }
     .temperature {
@@ -98,9 +94,9 @@
     }
     .temperature .celsius{
         width: 50%;
-        font-size: 4.5vw;
         margin: auto;
         margin-left: 1.5vw;
+        font-size: 4.5vw;
     }
     .temperature .weatherDescription, .humidity, .wind{
         margin-top: -5%;
@@ -147,7 +143,7 @@
     }
     .miniCard h3 {
         display: block;
-        padding: 5px;
+        padding: 0.7vh 1.5vh;
         margin: 0;
         font-size: 1.75vw;
     }
@@ -156,7 +152,6 @@
         width: 70%;
         margin: auto;
         margin-top: 10px;
-        
     }
     .miniCard i {
         margin: auto;
@@ -176,14 +171,11 @@
     }
 }
 
-
-
 /* CSS for portrait orientation */
 @media only screen and (max-width: 899px){
     body{
         background-color: #366293;
         background: linear-gradient(#366293,#244060);
-
     }
     .container {
         width: 100vw;
@@ -284,7 +276,6 @@
         display: block;
         font-size: 2.5vh;
     }
-
     .miniCards {
         display:block;
         width: 95vw;
@@ -325,8 +316,6 @@
         width: 50%;
         margin: auto;
     }
-    
-    
     .miniCard .info {
         display: flex;
         width: 30%;
