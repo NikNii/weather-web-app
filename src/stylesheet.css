@@ -2,15 +2,19 @@
 /* CSS for landscape orientation */
 @media only screen and (min-width: 900px){
     body {
-        height: 100%;
-        display: fixed;
+        height: 100vh;
+        position: absolute;
         top:0;
         left: 0;
+        background-attachment:fixed ;
         background-color: #366293;
         background: linear-gradient(#366293,#244060);
     }
+    .ui-active-dimmer {
+        width: 100%;
+    }
     .container {
-        height: 103vh;
+        height: 100vh;
         width: 100vw;
         position: absolute;
         top: 0;
@@ -19,6 +23,8 @@
         margin-top: -20px;
         padding: 0;
         font-family: 'Open Sans', sans-serif;
+        background-color: #366293;
+        background: linear-gradient(#366293,#244060);
     }
     p {
         font-size: 3vh;
@@ -52,14 +58,14 @@
         top: 11vh;
     }
     .card {
-        display: relative;
+        display: flex;
         width: 70vw;
         margin: 0.5vh auto;
         padding: 1% 2% 2% 2%;
         font-size: 120%;
         background-color: rgb(245, 245, 245);
-        border-radius: 5px;
-        box-shadow: 0px 2px 4px rgba(0,0,0,0.25);
+        border-radius: 3px;
+        box-shadow: 0px 2px 4px rgba(0,0,0,0.35);
         z-index: 2;
         overflow: auto;
     }
@@ -72,7 +78,7 @@
         vertical-align: middle;
         float: left;
     }
-    .card .location span {
+    .card .location {
         margin: auto;
     }
     .card .city {
@@ -80,58 +86,90 @@
         width: 50%;
         font-size: 9vh;
     }
-    .temperature {
-        width: 50;
+    .card .today {
         display: block;
-        padding: 5% 2%;
+        width: 50%;
+        font-size: 5vh;
+    }
+    .temperature {
+        display: flex;
+        width: 50%;
+        padding: 4% 2% 5% 2%;
     }
     .temperature .celsius{
-        font-size: 8vh;
-        margin: 0;
+        width: 50%;
+        font-size: 4.5vw;
+        margin: auto;
+        margin-left: 1.5vw;
     }
-    .card .weatherIcon {
-        float:left;
+    .temperature .weatherDescription, .humidity, .wind{
+        margin-top: -5%;
+        font-size: 1.5vw;
+        padding-right: 2%;
+        text-align: center;
+    }
+    .temperature .humidity, .wind {
+        padding: 1.5% 0;
+        color: rgb(115, 115, 115);
+        z-index: 13;
+    }
+    .extraDesc {
+        margin-top: -12%;
+    }
+    .extraDesc p{
+        margin: 0;
+        display: block;
+        font-size: 1vw;
+    }
+    .card .temperature i, .card .weatherIcon::before {
+        display: block;
+        margin: 4vh 0 0 1.5vw;
+        width: 30%;
+        font-size: 7vw;
     }
 
     .miniCards {
-        display:flex;
+        display: flex;
         width: 70vw;
         margin: auto;
     }
     .miniCard {
         display: relative;
         margin: 2px;
-        width: 10vw;
-        height: 19vh;
-        font-size: 75%;
+        width: 17.5vw;
+        font-size: 1vw;
         background-color: rgb(245, 245, 245);
-        border-radius: 5px;
-        box-shadow: 0px 1px 4px rgba(0,0,0,0.25);
+        border-radius: 3px;
+        box-shadow: 0px 1px 4px rgba(0,0,0,0.35);
         z-index: 2;
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
     .miniCard h3 {
         display: block;
         padding: 5px;
         margin: 0;
-        font-size: 3vh;
+        font-size: 1.75vw;
     }
     .miniCard .mainData {
         display: flex;
+        width: 70%;
         margin: auto;
         margin-top: 10px;
-        width: 100%;
+        
     }
     .miniCard i {
+        margin: auto;
         padding: 0 0 0 0.5vw;
     }
     .miniCard .celsius {
         margin: auto;
-        font-size: 4vh;
+        font-size: 2vw;
     }
     .miniCard .info p {
         width: 100%;
         margin: 0;
-        padding: 10px;
+        padding: 10px 10px 20px 10px;
         font-size: 2vh;
         text-align: center;
         
@@ -195,6 +233,7 @@
         height: 55vh;
         margin: 0.5vh auto;
         padding: 10px 20px;
+        font-size: 2.25vh;
         background-color: rgb(245, 245, 245);
         border-radius: 5px;
         box-shadow: 0px 2px 4px rgba(0,0,0,0.25);
@@ -210,27 +249,42 @@
     .card .weatherIcon {
         display: flex;
         width: 30%;
-        margin: 0 11vw 0 2px;
+        margin: 2vh 11vw 0 2px;
         float: left;
     }
-    .card p {
-        margin-top:-2vh;
-        text-align: center;
-    }
-
     .card .celsius {
         display: flex;
         width: 30%;
         margin: 0;
-        padding-left: 6vw;
+        margin-top: -2vh;
+        padding-left: 0;
         width: 50%;
         text-align: right;
-        font-size: 9vh;
+        font-size: 8.5vh;
+    }
+    .card p {
+        margin-top:-2vh;
     }
     .card .info {
         margin: 0;
         text-align: right;
     }
+    .temperature .humidity, .wind {
+        padding: 1.5% 0;
+        color: rgb(115, 115, 115);
+    }
+    .extraDesc {
+        width: 50%;
+        margin-top: -5%;
+        margin-right: 6%;
+        float: right;
+    }
+    .extraDesc p{
+        margin: 0;
+        display: block;
+        font-size: 2.5vh;
+    }
+
     .miniCards {
         display:block;
         width: 95vw;
@@ -264,16 +318,26 @@
     .miniCard i {
         width: 50%;
         padding: 0;
+        padding-right: 1vw;
         font-size: 60%;
     }
     .miniCard p.celsius {
         width: 50%;
         margin: auto;
     }
+    
+    
     .miniCard .info {
         display: flex;
         width: 30%;
         margin: auto;
+        color: rgb(92, 92, 92);
+        font-size: 1vh;        
+    }
+    .miniCard .info p{
+        padding-left: 7vw;
+        text-align: center;
+        color: rgb(92, 92, 92);
         font-size: 2vh;        
     }
 }
