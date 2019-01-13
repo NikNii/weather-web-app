@@ -2,13 +2,17 @@
 /* CSS for landscape orientation */
 @media only screen and (min-width: 900px){
     body {
+        height: 100%;
+        display: fixed;
+        top:0;
+        left: 0;
         background-color: #366293;
         background: linear-gradient(#366293,#244060);
     }
     .container {
         height: 103vh;
         width: 100vw;
-        position: fixed;
+        position: absolute;
         top: 0;
         left: 0;
         margin: 0;
@@ -51,19 +55,20 @@
         display: relative;
         width: 70vw;
         margin: 0.5vh auto;
-        padding: 1% 2% 3% 2%;
+        padding: 1% 2% 2% 2%;
         font-size: 120%;
         background-color: rgb(245, 245, 245);
         border-radius: 5px;
         box-shadow: 0px 2px 4px rgba(0,0,0,0.25);
         z-index: 2;
+        overflow: auto;
     }
     .card .location {
         display: table-cell;
         width: 60%;
         height: 100%;
         margin: auto;
-        padding-right: 10vw;
+        padding-right: 6vw;
         vertical-align: middle;
         float: left;
     }
@@ -98,6 +103,7 @@
         margin: 2px;
         width: 10vw;
         height: 19vh;
+        font-size: 75%;
         background-color: rgb(245, 245, 245);
         border-radius: 5px;
         box-shadow: 0px 1px 4px rgba(0,0,0,0.25);
@@ -116,7 +122,7 @@
         width: 100%;
     }
     .miniCard i {
-        padding: 0 0 0px 20px;
+        padding: 0 0 0 0.5vw;
     }
     .miniCard .celsius {
         margin: auto;
@@ -126,7 +132,7 @@
         width: 100%;
         margin: 0;
         padding: 10px;
-        font-size: 2.5vh;
+        font-size: 2vh;
         text-align: center;
         
     }
@@ -198,6 +204,9 @@
     .card .location .city {
         font-size: 7vh;
     }
+    .card .location span {
+        display: none;
+    }
     .card .weatherIcon {
         display: flex;
         width: 30%;
@@ -263,7 +272,7 @@
     }
     .miniCard .info {
         display: flex;
-        width: 30;
+        width: 30%;
         margin: auto;
         font-size: 2vh;        
     }
