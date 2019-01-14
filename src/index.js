@@ -84,13 +84,6 @@ class App extends React.Component{
         // Checks if the location has been received
         if(!this.state.errorMessage && this.state.lat && this.state.lng){
             this.getWeather(this.state.lat, this.state.lng);
-            console.log(this.state.week[new Date().getDay()]);
-            console.log(this.state.forecast[0]);
-            console.log(this.state.forecast[7]);
-            console.log(this.state.forecast[15]);
-            console.log(this.state.forecast[23]);
-            console.log(this.state.forecast[31]);
-
             return (
                 <div className="container">
                 <div className="toolbar">

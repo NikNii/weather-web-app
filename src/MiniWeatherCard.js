@@ -21,7 +21,6 @@ const MiniWeatherCard = (props) => {
     const week = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
     const dayIndex = props.day;
     const overallWeather = props.overallWeather;
-    console.log('overall is: ' + overallWeather)
     // const {iconName} = themeConfig[overallWeather] 
 
     return (
