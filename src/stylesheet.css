@@ -98,10 +98,12 @@
         margin-left: 1.5vw;
         font-size: 4.5vw;
     }
+    .temperature .weatherDescription {
+        text-transform: capitalize;
+    }
     .temperature .weatherDescription, .humidity, .wind{
         margin-top: -5%;
         font-size: 2vw;
-        text-transform: capitalize;
         padding-right: 2%;
         text-align: center;
     }
@@ -228,7 +230,6 @@
         margin: 0.5vh auto;
         padding: 10px 20px;
         font-size: 2.25vh;
-        text-transform: capitalize;
         background-color: rgb(245, 245, 245);
         border-radius: 5px;
         box-shadow: 0px 2px 4px rgba(0,0,0,0.25);
@@ -264,6 +265,9 @@
         margin: 0;
         text-align: right;
     }
+    .card .weatherDescription{
+        text-transform: capitalize;
+    }
     .temperature .humidity, .wind {
         padding: 1.5% 0;
         color: rgb(115, 115, 115);
@@ -290,6 +294,7 @@
         width: 95vw;
         height: 6vh;
         font-size: 1.2vh;
+        text-transform: capitalize;
         background-color: rgb(245, 245, 245);
         border-radius: 5px;
         box-shadow: 0px 1px 4px rgba(0,0,0,0.25);
